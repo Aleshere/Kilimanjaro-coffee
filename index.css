@@ -1,0 +1,283 @@
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower:regular);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    list-style: none;
+    font-family: 'indie flower', sans-serif;
+}
+
+:root {
+    --h1-headings: 5.2vh;
+    --p-headings: 3.4vh;
+    --dark-coffee: #231001;
+    --reddish: #c82926;
+}
+
+body {
+    font-size: 62.5%;
+}
+
+
+
+/* NAVBAR */
+nav.main {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    padding: .5rem;
+    position: fixed;
+    z-index: 999;
+}
+
+.menu {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2%;
+}
+
+a {
+    color: var(--dark-coffee);
+}
+
+li.logo a {
+    font-size: 1.5rem;
+    color: var(--reddish);
+}
+
+.fas, .fab.fa-facebook {
+    font-size: 1.5rem;
+    transition: all .2s ease-in-out;
+}
+
+.fab-fa-instagram {
+    font-size: 1rem;
+    transition: all .2s ease-in-out;
+}
+
+.bt {
+    width: 1.5rem;
+    height: 1.55rem;
+    font-size: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFF;
+    background: var(--dark-coffee); 
+}
+
+.fa-bars:hover {
+    color: var(--reddish);  
+}
+
+.fa-map-marker-alt:hover {
+    color: rgb(251, 143, 61);  
+}
+
+.bt:hover {
+    background: rgb(188, 42, 141); 
+}
+
+.fa-facebook:hover {
+    color: rgb(59, 89, 152); 
+}
+
+.menu li {
+    padding: 0 2vw;
+}
+
+.toggle {
+    padding-right: 1.5rem;
+}
+
+.left {
+    width: 45%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.right {
+    width: 35%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+/* BURGER SLIDER */
+
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 155%;
+  left: 5%;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  color: var(--reddish);
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: var(--dark-coffee);
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 24px;
+  height: 4px;
+  margin-bottom: 3px;
+  position: relative;
+  background: var(--dark-coffee);
+  border-radius: 6px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: var(--dark-coffee);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: 110vw;
+  margin: -100px 0 0 -50px;
+  padding: 2rem 4rem;
+  padding-top: 8rem;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+
+
+
+
+
+
+/* MAIN BODY LANDING PAGE */
+main {
+    height: 100vh;
+    padding-top: 3.2rem;
+    position: relative;
+    overflow: auto;
+}
+
+main::after {
+    content: '';
+    background: url(images/hero.jpeg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: .7;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.container {
+    max-width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.landing-text-wrap {
+    margin-bottom: 10rem;
+}
+
+main h1 {
+    font-size: var(--h1-headings);
+    color: var(--dark-coffee)
+}
+
+main p {
+    font-size: var(--p-headings);
+    color: var(--dark-coffee);
+    margin-bottom: 1rem;
+}
+
+.btn {
+    font-size: var(--p-headings);
+    text-transform: uppercase;
+    padding: .2rem 1.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--reddish);
+    color: #fff;
+    transition: background-color .3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: var(--reddish);
+}
+
+
+
+
