@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Indie+Flower:regular);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic);
 
 * {
     padding: 0;
@@ -12,6 +13,8 @@
 
 :root {
     --h1-headings: 5.2vh;
+    --h2-headings: 3rem;
+    --h3-headings: 2rem;
     --p-headings: 3.4vh;
     --dark-coffee: #231001;
     --reddish: #c82926;
@@ -19,6 +22,15 @@
 
 body {
     font-size: 62.5%;
+}
+
+
+/* COMMON STYLES */
+h2 {
+    font-size: var(--h2-headings);
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 1rem;
+    font-weight: normal;
 }
 
 
@@ -207,6 +219,10 @@ li.logo a {
   transform: none;
 }
 
+.menu-open {
+    background-color: rgba(0,0,0,1)
+}
+
 
 
 
@@ -214,14 +230,14 @@ li.logo a {
 
 
 /* MAIN BODY LANDING PAGE */
-main {
+.landing-main {
     height: 100vh;
     padding-top: 3.2rem;
     position: relative;
     overflow: auto;
 }
 
-main::after {
+.landing-main::after {
     content: '';
     background: url(images/hero.jpeg) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -278,6 +294,120 @@ main p {
     color: var(--reddish);
 }
 
+
+
+
+/* MISSION PAGE */
+.subpages-main {
+    height: 100vh;
+    padding-top: 3.2rem;
+    position: relative;
+    overflow: auto;
+}
+
+.subpages-main::after {
+    content: '';
+    background: url(images/hero.jpeg) no-repeat center fixed;
+    background-position: 40% 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: .7; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.mission-text-wrap {
+    width: 85%;
+    /* margin-bottom: 10rem; */
+}
+
+
+
+
+
+/* MENU PAGES */
+.menu-main {
+    min-height: 470vh;
+    padding-top: 3.2rem;
+    position: relative;
+    overflow: auto;
+}
+
+.menu-main::after {
+    content: '';
+    background: url(images/hero.jpeg) repeat center fixed;
+    background-position: 40% 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: .7; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.menu-container {
+    max-width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* margin: 0 5rem 0 1rem; */
+    margin: 0 35% 0 5%;
+}
+
+td {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+td:nth-child(2), td:nth-child(3) {
+    text-align: center;
+    padding: 0 .2rem;
+}
+
+.menu-heading {
+    font-size: 1.5rem;
+    color: var(--reddish)
+}
+
+.menu-size {
+    font-size: 1rem;
+}
+
+.item-ingredients {
+    font-size: .8rem;
+    font-style: cursive;
+    padding: 0 0 .7rem 0;
+}
+
+.brunch-header {
+    margin-top: 4rem;
+}
+
+
+
+
+/* CONTACTS PAGE */
+h3 {
+    font-size: var(--h3-headings);
+    color: var(--reddish)
+}
+
+.contact {
+    margin-top: 2rem;
+}
 
 
 
