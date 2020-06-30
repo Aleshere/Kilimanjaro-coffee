@@ -15,7 +15,7 @@
     --h1-headings: 5.2vh;
     --h2-headings: 3rem;
     --h3-headings: 2rem;
-    --p-headings: 3.4vh;
+    --p-headings: 3vh;
     --dark-coffee: #231001;
     --reddish: #c82926;
 }
@@ -120,6 +120,11 @@ li.logo a {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+
+/* LAPTOP MENU */
+#lg-menu {
+    display: none;
 }
 
 
@@ -272,6 +277,7 @@ main h1 {
 }
 
 main p {
+    font-family: 'Open Sans', sans-serif;
     font-size: var(--p-headings);
     color: var(--dark-coffee);
     margin-bottom: 1rem;
@@ -301,7 +307,7 @@ main p {
 .subpages-main {
     height: 100vh;
     padding-top: 3.2rem;
-    position: relative;
+    /* position: relative; */
     overflow: auto;
 }
 
@@ -324,7 +330,6 @@ main p {
 
 .mission-text-wrap {
     width: 85%;
-    /* margin-bottom: 10rem; */
 }
 
 
@@ -334,7 +339,7 @@ main p {
 /* MENU PAGES */
 .menu-main {
     min-height: 470vh;
-    padding-top: 3.2rem;
+    padding-top: 10vh;
     position: relative;
     overflow: auto;
 }
@@ -378,6 +383,7 @@ td:nth-child(2), td:nth-child(3) {
 }
 
 .menu-heading {
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.5rem;
     color: var(--reddish)
 }
@@ -408,6 +414,350 @@ h3 {
 .contact {
     margin-top: 2rem;
 }
+
+
+
+/* @media (min-width: 375px) and (orientation: portrait) {}  */
+
+@media (min-width: 375px) and (orientation: landscape) {
+    /* BURGER SLIDER */
+    #menuToggle {
+        left: 20%;
+    }
+    #menu {
+        width: 80vw;
+    }
+
+    /* MAIN BODY LANDING PAGE */
+    .landing-main {
+        padding-top: 8.2rem;
+    }
+    main h1 {
+        font-size: 7vw;
+    }
+    main p {
+        font-size: 3vw;
+    }
+    .btn {
+        font-size: 3vw;
+    }
+
+    /* MISSION */
+    .mission-text-wrap {
+        width: 55%;
+    }
+    .mission-text-wrap p {
+        font-size: 1rem;
+    }
+
+    /* MENU */
+    .menu-main {
+        min-height: 660vh;
+    }
+    .menu-container {
+        max-width: 70%;
+        height: 100%;
+        margin: 0 45% 0 5%;
+    }
+
+    /* CONTACTS */
+    .contacts .container div h2 {
+        font-size: 3.5vw;
+    }
+    .contacts .container div p {
+        font-size: 2.5vw;
+        line-height: .8;
+    }
+    .contacts {
+        height: 110vh;
+        padding-top: 1rem;
+    }
+    h3 {
+        font-size: 3vw;
+    }
+    .contact {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    /* MAIN BODY LANDING PAGE */
+    .landing-main {
+        padding-top: 0rem;
+    }
+    main h1 {
+        font-size: 10vw;
+    }
+    main p {
+        font-size: 4vw;
+    }
+    .btn {
+        font-size: 4vw;
+    }
+
+    /* MISSION */
+    .subpages-main {
+        padding-top: 0;
+    }
+    .mission-text-wrap {
+        position: relative;
+        top: -15vh;
+        width: 65%;
+    }
+    .mission-text-wrap h2 {
+        font-size: 5.5vw;
+    }
+    .mission-text-wrap p {
+        font-size: 3vw;
+    }
+
+    /* MENU */
+    .menu-main {
+        min-height: 260vh;
+    }
+    .menu-container {
+        max-width: 70%;
+        height: 100%;
+        margin: 0 25% 0 5%;
+    }
+
+    /* CONTACTS */
+    .contacts .container > div {
+        position: relative;
+        top: -15vh;
+        width: 65%;
+    }
+    .contacts .container div h2 {
+        font-size: 5.5vw;
+    }
+    .contacts .container div p {
+        font-size: 3vw;
+    }
+    .contacts {
+        height: 100vh;
+        padding-top: 0rem;
+    }
+    h3 {
+        font-size: 3.5vw;
+    }
+    .contact {
+        margin-top: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        position: relative;
+    }
+    li.logo a {
+        font-size: 2.2vw;
+    }
+
+    /* BURGER SLIDER */
+    #menuToggle {
+        display: none
+    }
+    #menuToggle input {
+        display: none;
+    } 
+    .menu li {
+        padding: 0 1vw;
+    }
+    .menu .left li, .menu .left ul li {
+        margin-left: 4vw;
+    }
+    #lg-menu {
+        display: flex;
+    }
+    #lg-menu li {
+        font-size: 2.2vw;
+    }
+    #lg-menu li a {
+        color: var(--reddish);
+    }
+
+    /* MAIN BODY LANDING PAGE */
+    .landing-main {
+        padding-top: 0;
+    }
+    .landing-text-wrap {
+        position: relative;
+        margin-bottom: 0;
+        left: 3vw;
+    }
+    main h1 {
+        font-size: 6vw;
+    }
+    main p {
+        font-size: 3vw;
+    }
+    .btn {
+        font-size: 3vw;
+    }
+
+    /* MISSION */
+    .mission-text-wrap {
+        width: 55%;
+        top: -5vh;
+    }
+    .mission-text-wrap p {
+        font-size: 2vw;
+    }
+
+    /* MENU */
+    .menu-main {
+        min-height: 280vh;
+    }
+    .menu-container {
+        max-width: 75%;
+        height: 100%;
+        margin: 0 0 0 5%;
+    }
+
+    /* CONTACTS */
+    .contacts .container div {
+        width: 55%;
+        top: -5vh;
+    }
+    .contact {
+        width: 100% !important;
+    }
+    .contacts .container div h2 {
+        font-size: 4vw;
+    }
+    .contacts .container div p {
+        font-size: 2vw;
+    }
+    h3 {
+        font-size: 2.5vw;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    /* MISSION */
+    .mission-text-wrap {
+        top: 0;
+    }
+    .mission-text-wrap h2 {
+        font-size: 3.5vw;
+    }
+    .mission-text-wrap p {
+        font-size: 1.7vw;
+    }
+
+    /* MAIN BODY LANDING PAGE */
+    main h1 {
+        font-size: 6vw;
+    }
+    main p {
+        font-size: 3vw;
+    }
+    .btn {
+        font-size: 3vw;
+    }
+
+    /* MENU */
+    .menu-main {
+        min-height: 300vh;
+    }
+    table {
+        min-width: 70%;
+    }
+    .menu-text-wrap {
+        min-width: 70%;
+    }
+    .menu-container {
+        max-width: 70%;
+        height: 100%;
+        margin: 0 0 0 5%;
+    }
+    td {
+        font-size: 2.5vh;
+    }
+    .item-ingredients {
+        font-size: 1.5vh;
+    }
+    .menu-container {
+        max-width: 75%;
+        height: 100%;
+        margin: 0 0 0 5%;
+    }
+    /* CONTACTS */
+    .contacts .container div {
+        width: 55%;
+        height: 70%;
+        top: 0;
+    }
+    .contacts .container div h2 {
+        font-size: 3.5vw;
+    }
+    .contacts .container div p {
+        font-size: 1.5vw;
+    }
+    h3 {
+        font-size: 2vw;
+    }
+}
+
+/* @media (min-width: 1366px) {} */
+
+@media (min-width: 1680px) {
+    /* MISSION */
+    .mission-text-wrap {
+        width: 55%;
+        top: 0;
+    }
+
+    /* MENU */
+    .menu-container {
+        max-width: 60%;
+    }
+    .drinks-header, .brunch-header {
+        font-size: 6vh;
+    }
+    .menu-heading {
+        font-size: 3.5vh;
+    }
+    .menu-size {
+        font-size: 2vh;
+    }
+    /* CONTACTS */
+    .contacts .container div {
+        width: 55%;
+        top: 10vh;
+    }
+}
+
+@media (min-width: 1920px) and (max-height: 1080px) {
+
+    .drinks-header, .brunch-header {
+        font-size: 6vh;
+    }
+
+    /* MENU */
+    .menu-main {
+        min-height: 360vh;
+    }
+    .menu-container {
+        max-width: 80%;
+    }
+    .drinks-header, .brunch-header {
+        font-size: 6vh;
+    }
+    td {
+        font-size: 3.5vh;
+    }
+    .item-ingredients {
+        font-size: 2.5vh;
+    }
+
+    /* CONTACTS */
+    .contacts .container div {
+        width: 55%;
+    }
+}
+
 
 
 

@@ -16,3 +16,18 @@ document.addEventListener('click', (e) => {
         container.classList.remove('menu-open');
     }
 })
+
+
+// // API GOOGLE MAPS
+
+// // Initialize and add the map
+// function initMap() {
+//   // The location of Kilimanjaro
+//   const kili = {lat: -55.945, lng: -3.183};
+//   // The map, centered at the coffee shop
+//   const map = new google.maps.Map(document.getElementById('map'), {zoom: 4, center: kili});
+//   // The marker, positioned at the coffee shop
+//   var marker = new google.maps.Marker({position: kili, map: map});
+// }
+
+// initMap();
